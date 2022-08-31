@@ -1,3 +1,4 @@
+/* normalize makes browsers render all elements more consistently and in line with modern standards. It precisely targets only the styles that need normalizing. */
 @import-normalize;
 
 /* Styling copied from github */
@@ -98,6 +99,7 @@ button {
   font-family: "Montserrat", sans-serif;
 }
 
+/* its a overaly so have position of absolute */
 .backdrop {
   position: absolute;
   top: 0;
@@ -111,6 +113,9 @@ button {
   overflow-y: hidden;
 }
 
+/* to make the height and width responsive will use clamp */
+/* clamp in this case will attempt to set the width to 700px but if the screen is too small 
+/* then it will go up to 90% if needed but if its too big then it will go to a maximum of 50% of the screen width */
 .modal {
   /* use clamp instead of media queries */
   width: clamp(50%, 700px, 90%);
